@@ -114,9 +114,6 @@ var getBadges = function(t){
 
 // We need to call initialize to get all of our capability handles set up and registered with Trello
 TrelloPowerUp.initialize({
-  'card-badges': function(t, options){
-    return getBadges(t);
-  },
   'card-buttons': function(t, options) {
     return [{
               icon: W2P_ICON,
@@ -138,10 +135,5 @@ TrelloPowerUp.initialize({
                 });
               }
             }];
-  },
-  'card-detail-badges': function(t, options) {
-    return getBadges(t);
   }
 });
-
-console.log('Loaded by: ' + document.referrer);
